@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +12,45 @@
     <h1 class="cabecalho">Meus Aniversarios</h1>
   </header>
   <main>
-    <form data-formulario>
+    <form onsubmit="adicionaAniversario()" data-formulario>
       <fieldset>
         <label for="nome">Nome:</label>
-        <input id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ ]{3,120}$" required data-nome>
-        <span>Nome deve conter apenas letras e ter entre 3 e 120 caracteres</span>
+        <input value="Emanuel" id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required
+          data-nome>
+        <span class="mensagem_erro"></span>
       </fieldset>
       <fieldset>
         <label for="aniversario">Data:</label>
-        <input id="aniversario" name="aniversario" type="date" required data-data>
+        <input value="2000-01-12" id="aniversario" name="aniversario" type="date" required data-data>
+        <span class="mensagem_erro"></span>
       </fieldset>
-      <button type="submit">Salvar</button>
+      <button data-btnsalvaAniversario type="submit">Salvar</button>
     </form>
-
+    <table >
+      <thead>
+        <th>Nome</th>
+        <th>Data de aniversario</th>
+        <th>Ações</th>
+      </thead>
+      <tbody data-tabelaAniversarios>
+        <tr>
+          <td>Leandra </td>
+          <td>12/02/2000</td>
+          <td>Editar / DELETE</td>
+        </tr>
+        <tr>
+          <td>Emanuel</td>
+          <td>14/01/2005</td>
+          <td>Editar / DELETE</td>
+        </tr>
+        <tr>
+          <td>Katarina</td>
+          <td>20/08/2009</td>
+          <td>Editar / DELETE</td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="teste"> TESTE</button>
   </main>
 </body>
 <script src="/js/index.js" type="module"></script>

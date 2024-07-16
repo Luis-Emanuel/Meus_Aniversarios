@@ -1,25 +1,21 @@
-import formataData from "./validaData.js";
+import adicionaAniversario from "./adiciona.js";
+import validacao from "./validaCampos.js";
 
 const form = document.querySelector('[data-formulario]');
-const campos = form.querySelectorAll('input')
 
-campos.forEach((campo) => {
-  campo.addEventListener("blur", () => validaCampo(campo))
-})
+validacao()
+const aniversarios = []
 
-function validaCampo(campo) {
-  if (campo.name == "aniversario") {
-    formataData(campo)
-  }
-}
+form.addEventListener('submit', (evento) => {
+  evento.preventDefault();
+  adicionaAniversario(evento, aniversarios)
+});
 
 
 
 
 
 
-
-
-
-
+// const btnTeste = document.querySelector('.teste');
+// const tabelaAniversario = document.querySelector('[data-tabelaAniversarios]');
 
