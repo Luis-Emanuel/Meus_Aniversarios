@@ -9,8 +9,8 @@ export default function validacao() {
         campo.addEventListener("blur", () => validaCampo(campo))
         btnsalvaAniversario.addEventListener("click", () => validaCampo(campo))
         campo.addEventListener("invalid", (evento) => evento.preventDefault())
-    })
-}
+    });
+};
 
 
 function validaCampo(campo) {

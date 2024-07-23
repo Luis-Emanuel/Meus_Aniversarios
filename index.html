@@ -12,7 +12,7 @@
     <h1 class="cabecalho">Meus Aniversarios</h1>
   </header>
   <main>
-    <form onsubmit="adicionaAniversario()" data-formulario>
+    <form data-formulario>
       <fieldset>
         <label for="nome">Nome:</label>
         <input value="Emanuel" id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required
@@ -26,31 +26,15 @@
       </fieldset>
       <button data-btnsalvaAniversario type="submit">Salvar</button>
     </form>
-    <table >
+    <table data-tabelaAniversarios>
       <thead>
         <th>Nome</th>
         <th>Data de aniversario</th>
         <th>Ações</th>
       </thead>
-      <tbody data-tabelaAniversarios>
-        <tr>
-          <td>Leandra </td>
-          <td>12/02/2000</td>
-          <td>Editar / DELETE</td>
-        </tr>
-        <tr>
-          <td>Emanuel</td>
-          <td>14/01/2005</td>
-          <td>Editar / DELETE</td>
-        </tr>
-        <tr>
-          <td>Katarina</td>
-          <td>20/08/2009</td>
-          <td>Editar / DELETE</td>
-        </tr>
+      <tbody data-corpoTabelaAniversarios>
       </tbody>
     </table>
-    <button class="teste"> TESTE</button>
   </main>
 </body>
 <script src="/js/index.js" type="module"></script>
