@@ -15,28 +15,31 @@
     <form data-formulario>
       <fieldset>
         <label for="nome">Nome:</label>
-        <input value="Emanuel" id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required
+        <input id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required
           data-nome>
         <span class="mensagem_erro"></span>
       </fieldset>
       <fieldset>
         <label for="aniversario">Data:</label>
-        <input value="2000-01-12" id="aniversario" name="aniversario" type="date" required data-data>
+        <input id="aniversario" name="aniversario" type="date" required data-data>
         <span class="mensagem_erro"></span>
       </fieldset>
-      <button data-btnsalvaAniversario type="submit">Salvar</button>
+      <button data-btnsalvaaniversario type="submit">Salvar</button>
     </form>
-    <table data-tabelaAniversarios>
+    <table data-tabelaaniversarios>
       <thead>
-        <th>Nome</th>
-        <th>Data de aniversario</th>
-        <th>Ações</th>
-      </thead>
-      <tbody data-corpoTabelaAniversarios>
-      </tbody>
+        <tr>
+            <th>Nome</th>
+            <th>Data de aniversario</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody data-corpotabelaaniversarios>
+    </tbody>
     </table>
   </main>
 </body>
 <script src="/js/index.js" type="module"></script>
 
 </html>
+

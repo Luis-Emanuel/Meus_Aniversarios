@@ -1,7 +1,7 @@
 import { validaAniversario } from './validaData.js';
 
 const form = document.querySelector('[data-formulario]');
-const btnsalvaAniversario = document.querySelector('[data-btnsalvaAniversario]');
+const btnsalvaAniversario = document.querySelector('[data-btnsalvaaniversario]');
 const campos = form.querySelectorAll('input');
 
 export default function validacao() {
