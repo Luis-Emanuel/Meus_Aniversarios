@@ -1,3 +1,5 @@
+import deletar from "./deletar.js";
+
 const corpoTabela = document.querySelector('[data-corpotabelaaniversarios]');
 
 export function exibirCorpoTabela() {
@@ -24,8 +26,11 @@ export function exibiLinhaTabela(nome, data) {
     //btnEditar.addEventListener("click", editar(newRow))
 
     const btnDeletar = document.createElement('button');
-    btnDeletar.innerHTML = "Deletar"
-    //btnEditar.addEventListener("click", deletar(newRow))
+    btnDeletar.innerHTML = "Deletar";
+    btnDeletar.onclick = () => deletar(nome);;
+    // btnDeletar.addEventListener("click", evento => {
+    //     deletar(newRow)
+    // });
 
     linhaNome.innerHTML = nome;
     linhaData.innerHTML = data;
