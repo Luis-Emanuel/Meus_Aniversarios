@@ -1,17 +1,23 @@
 import { exibirCorpoTabela } from "./exibir.js";
+import { atulizaListaAniversario, pegaListaAniversario } from "./listaDeAniversario.js";
 
+export default function salvaAniversario(evento) {
+    evento.preventDefault();
+    const aniversarios = pegaListaAniversario() 
 
-export default function salvaAniversario(evento, aniversarios) {
-    let nome = evento.target.elements["nome"].value
-    let data = evento.target.elements["aniversario"].value
+    let nome = evento.target.elements["nome"].value;
+    let data = evento.target.elements["aniversario"].value;
 
-    const aniversario = {
-        "Nome": nome,
-        "Data": data
+    const novoAniversario = {
+        Nome: nome,
+        Data: data
     };
-    aniversarios.push(aniversario)
-    localStorage.setItem("aniversarios", JSON.stringify(aniversarios));
-    exibirCorpoTabela()
+    
+    aniversarios.push(novoAniversario);
+
+    atulizaListaAniversario(aniversarios);
+
+    exibirCorpoTabela();
 
     evento.target.elements["nome"].value = '';
     evento.target.elements["aniversario"].value = '';

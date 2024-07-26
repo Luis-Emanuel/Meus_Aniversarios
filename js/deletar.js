@@ -1,9 +1,9 @@
 import { exibirCorpoTabela } from "./exibir.js"
+import { atulizaListaAniversario } from "./listaDeAniversario.js";
 
 export default function deletar(nome) {
     var aniversarios = JSON.parse(localStorage.getItem('aniversarios'))
-    var aniversariDeletado = aniversarios.filter(aniversario => (aniversario.Nome != nome))
-    localStorage.setItem("aniversarios", JSON.stringify(aniversariDeletado));
-    console.log(aniversariDeletado);
-    exibirCorpoTabela() ;
+    var aniversariDeletado = aniversarios.filter(aniversario => (aniversario.Nome !== nome))
+    atulizaListaAniversario(aniversariDeletado);
+    exibirCorpoTabela();
 }

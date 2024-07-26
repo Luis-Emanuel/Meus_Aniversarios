@@ -1,13 +1,15 @@
 import deletar from "./deletar.js";
+import { pegaListaAniversario } from "./listaDeAniversario.js";
 
 const corpoTabela = document.querySelector('[data-corpotabelaaniversarios]');
 
 export function exibirCorpoTabela() {
     corpoTabela.innerHTML = '';
-    const aniversarios = JSON.parse(localStorage.getItem('aniversarios'))
+
+    const aniversarios = pegaListaAniversario()
     aniversarios.forEach(aniversario => {
-        exibiLinhaTabela(aniversario.Nome, aniversario.Data)
-    })
+        exibiLinhaTabela(aniversario.Nome, aniversario.Data);
+    });
 }
 
 export function exibiLinhaTabela(nome, data) {
@@ -28,9 +30,6 @@ export function exibiLinhaTabela(nome, data) {
     const btnDeletar = document.createElement('button');
     btnDeletar.innerHTML = "Deletar";
     btnDeletar.onclick = () => deletar(nome);;
-    // btnDeletar.addEventListener("click", evento => {
-    //     deletar(newRow)
-    // });
 
     linhaNome.innerHTML = nome;
     linhaData.innerHTML = data;
