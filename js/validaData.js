@@ -7,7 +7,6 @@ export function validaAniversario(campo) {
 }
 
 export function formataData(data) {
-    console.log(data)
     const dataFormatada = data.split('-').reverse().join('/')
     return dataFormatada
 }

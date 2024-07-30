@@ -1,5 +1,7 @@
 import deletar from "./deletar.js";
+import editar from "./editar.js";
 import { pegaListaAniversario } from "./listaDeAniversario.js";
+import { formataData } from "./validaData.js";
 
 const corpoTabela = document.querySelector('[data-corpotabelaaniversarios]');
 
@@ -25,14 +27,14 @@ export function exibiLinhaTabela(nome, data) {
     //Cria os botões da celula 3
     const btnEditar = document.createElement('button');
     btnEditar.innerHTML = "Editar";
-    //btnEditar.addEventListener("click", editar(newRow))
+    btnEditar.addEventListener("click",() => editar(nome, data))
 
     const btnDeletar = document.createElement('button');
     btnDeletar.innerHTML = "Deletar";
     btnDeletar.onclick = () => deletar(nome);;
 
     linhaNome.innerHTML = nome;
-    linhaData.innerHTML = data;
+    linhaData.innerHTML = formataData(data);
     linhaAcoes.appendChild(btnEditar);
     linhaAcoes.appendChild(btnDeletar);
 }
