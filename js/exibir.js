@@ -28,11 +28,13 @@ export function exibiLinhaTabela(nome, data) {
     const btnEditar = document.createElement('button');
     btnEditar.innerHTML = "Editar";
     btnEditar.addEventListener("click",() => editar(nome, data))
-
+    btnEditar.classList.add('btnEditar')
+    
     const btnDeletar = document.createElement('button');
     btnDeletar.innerHTML = "Deletar";
     btnDeletar.onclick = () => deletar(nome);;
-
+    btnDeletar.classList.add('btnDeletar')
+    
     linhaNome.innerHTML = nome;
     linhaData.innerHTML = formataData(data);
     linhaAcoes.appendChild(btnEditar);

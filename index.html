@@ -4,29 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <title>Meus Aniversários</title>
 </head>
 
 <body>
-  <header>
-    <h1 class="cabecalho">Meus Aniversarios</h1>
+  <header class="cabecalho">
+    <h1>Meus Aniversarios</h1>
   </header>
-  <main>
-    <form data-formulario>
-      <fieldset>
-        <label for="nome">Nome:</label>
-        <input id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required
+  <main class="container">
+    <form class="formulario" data-formulario>
+      <fieldset class="campo">
+        <label for="nome">Nome da pessoa</label>
+        <input id="nome" name="nome" type="text" minlength="3" maxlength="120" pattern="^[A-Za-z ]+$" required placeholder="Digite o nome da pessoa aqui, por exemplo: João ou Maria"
           data-nome>
         <span class="mensagem_erro"></span>
       </fieldset>
-      <fieldset>
-        <label for="aniversario">Data:</label>
-        <input id="aniversario" name="aniversario" type="date" required data-data>
+      <fieldset class="campo">
+        <label for="aniversario">Data de nascimento</label>
+        <input id="aniversario" name="aniversario" type="date" required placeholder="Digite a data da pessoa aqui, por exemplo: 28/01/2002" data-data>
         <span class="mensagem_erro"></span>
       </fieldset>
-      <button data-btnsalvaaniversario type="submit">Salvar</button>
+      <button class="btnSalvar" data-btnsalvaaniversario type="submit">Salvar</button>
     </form>
-    <table data-tabelaaniversarios>
+    <table class="tabelaAniversario" data-tabelaaniversarios>
       <thead>
         <tr>
             <th>Nome</th>

@@ -1,0 +1,90 @@
+body {
+    font-family: sans-serif;
+    background-color: #f1f1f1;
+}
+
+.cabecalho {
+    background-color: rgb(124, 124, 252);
+}
+
+.cabecalho h1 {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.container {
+    padding: 4rem;
+}
+
+.formulario {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.campo {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo input {
+    border: none;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: rgb(209, 209, 209);
+    color: #000;
+    outline: none;
+}
+
+.campo input::placeholder {
+    color: #585656;
+}
+
+.mensagem_erro {
+    color: red;
+}
+
+.btnSalvar {
+    width: 7rem;
+    padding: 0.7rem;
+    color: white;
+    border-radius: 8px;
+    font-family: sans-serif;
+    font-weight: 100;
+    border: none;
+    background-color: rgb(67, 173, 67);
+}
+
+.tabelaAniversario {
+    width: 100%;
+}
+
+.tabelaAniversario th {
+    font-weight: bold;
+}
+
+.tabelaAniversario th,
+td {
+    border: 1px solid rgb(170, 170, 170);
+    text-align: left;
+    padding: 0.5rem 1rem;
+}
+
+.btnEditar,
+.btnDeletar {
+    border: none;
+}
+
+.btnEditar {
+    color: rgb(129, 141, 111);
+}
+
+.btnDeletar {
+    color: red;
+}
