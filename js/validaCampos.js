@@ -4,6 +4,7 @@ const form = document.querySelector('[data-formulario]');
 const btnsalvaAniversario = document.querySelector('[data-btnsalvaaniversario]');
 const campos = form.querySelectorAll('input');
 
+
 export default function validacao() {
     campos.forEach((campo) => {
         campo.addEventListener("blur", () => validaCampo(campo))
@@ -45,12 +46,13 @@ const tiposErros = [
 
 const mensagens = {
     nome: {
-        valueMissing: 'O campo de nome não pode estar vazio.',
+        valueMissing: 'O campo nome não pode estar vazio.',
         tooShort: 'Por favor, preencha um nome válido.',
         patternMismatch: 'Nome deve conter apenas letras'
     },
     aniversario: {
-        valueMissing: 'O campo de data de nascimento não pode estar vazio.',
-        customError: 'A data infromada deve ser menor que a data atual.'
+        valueMissing: 'O campo data de nascimento não pode estar vazio.',
+        customError: 'A data infromada deve ser menor que a data atual.',
+        patternMismatch: 'A data precisa estar no formato DD/MM/AAAA'
     }
 }

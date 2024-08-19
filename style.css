@@ -3,6 +3,7 @@ body {
     background-color: #f1f1f1;
 }
 
+
 .cabecalho {
     background-color: rgb(124, 124, 252);
 }
@@ -15,7 +16,7 @@ body {
 }
 
 .container {
-    padding: 4rem;
+    margin: 2rem;
 }
 
 .formulario {
@@ -27,7 +28,8 @@ body {
 }
 
 .campo {
-    width: 40rem;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -44,6 +46,10 @@ body {
 
 .campo input::placeholder {
     color: #585656;
+}
+
+.campo_obrigatorio>span {
+    color: #979191;
 }
 
 .mensagem_erro {
@@ -67,6 +73,10 @@ body {
 
 .tabelaAniversario th {
     font-weight: bold;
+}
+
+.tabelaAniversario th:nth-child(1) {
+    width: 50%;
 }
 
 .tabelaAniversario th,
